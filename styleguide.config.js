@@ -59,7 +59,23 @@ module.exports = {
 				},
 				{
 					name: 'Date Time',
-					components: 'src/components/{date-time}/*.js',
+					sections: [
+						{
+							name: 'DateTimePicker',
+							component: 'src/components/date-time/index.js',
+							content: 'src/components/date-time/README.md',
+						},
+						{
+							name: 'DatePicker',
+							component: 'src/components/date-time/date.js',
+							content: 'src/wordpress/date-time/DatePicker.md',
+						},
+						{
+							name: 'TimePicker',
+							component: 'src/components/date-time/time.js',
+							content: 'src/wordpress/date-time/TimePicker.md',
+						},
+					],
 				},
 				{
 					name: 'Dropdown',
@@ -71,7 +87,13 @@ module.exports = {
 				},
 				{
 					name: 'Font',
-					components: 'src/components/*font*/*.js',
+					sections: [
+						{
+							name: 'FontSizePicker',
+							component: 'src/components/font-size-picker/index.js',
+							content: 'src/wordpress/font-size-picker/FontSizePicker.md',
+						},
+					],
 				},
 				{
 					name: 'Form',
@@ -125,7 +147,8 @@ module.exports = {
 				},
 				{
 					name: 'Modal',
-					components: [ 'src/components/*modal*/*.js', 'src/components/popover/*.js' ],
+					components: 'src/components/*modal*/*.js',
+					ignore: 'src/components/modal/aria-helper.js',
 				},
 				{
 					name: 'Notice',
@@ -138,6 +161,14 @@ module.exports = {
 				{
 					name: 'Pickers',
 					components: [ 'src/components/*picker*/*.js' ],
+				},
+				{
+					name: 'Popover',
+					components: 'src/components/popover/*.js',
+					ignore: [
+						'src/components/popover/Content.js',
+						'src/components/popover/utils.js',
+					],
 				},
 				{
 					name: 'Portals',
@@ -163,8 +194,8 @@ module.exports = {
 					components: 'src/components/*toolbar*/*.js',
 				},
 				{
-					name: 'Tooltip',
-					components: [ 'src/components/*tooltip*/*.js', 'src/components/popover/*.js' ],
+					name: 'Tooltips',
+					components: 'src/components/tooltip/*.js',
 				},
 				{
 					name: 'Wrappers',
