@@ -13,6 +13,9 @@ module.exports = {
 		'**/*.native.js',
 		'**/mobile/**',
 	],
+
+	styleguideDir: './',
+
 	require: [
 		path.join( __dirname, 'node_modules/@wordpress/components/build-style/style.css' ),
 	],
