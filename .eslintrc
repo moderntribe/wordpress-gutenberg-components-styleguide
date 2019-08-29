@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "products/react",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "wpcalypso/import-docblock": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
