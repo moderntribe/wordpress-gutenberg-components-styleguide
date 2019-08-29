@@ -29,6 +29,9 @@ module.exports = {
 		}
 		return props;
 	},
+
+	exampleMode: 'expand',
+
 	sections: [
 		{
 			name: 'Introduction',
@@ -39,7 +42,14 @@ module.exports = {
 			sections: [
 				{
 					name: 'Animation',
-					components: [ 'src/components/animate/*.js', 'src/components/spinner/*.js' ],
+					sections: [
+						{
+							name: 'Animate',
+							component: 'src/components/animate/index.js',
+							content: 'src/wordpress/animate/Animate.md',
+						},
+					],
+					components: [ 'src/components/spinner/*.js' ],
 				},
 				{
 					name: 'Button',
