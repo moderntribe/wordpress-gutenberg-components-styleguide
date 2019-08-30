@@ -25,7 +25,7 @@ module.exports = {
 		console.warn( exampleFilePath );
 
 		if ( props.lang === 'jsx' && props.content ) {
-			const componentsMatch  = props.content.match( /const (\w*) =[^>]/ );
+			const componentsMatch  = props.content.match( /[^\t]const (\w+) =/ );
 			const component = ! isEmpty( componentsMatch ) ? `<${ componentsMatch[ 1 ] } />` : '';
 
 			props.content = `${ props.content }\n\n;${ component }`;
