@@ -1,0 +1,22 @@
+name: Styleguide Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+
+      - name: npm install and build
+        run: |
+          npm install
+          npm run styleguide:build --if-present
+
+      - name: Commit changes
+        uses: elstudio/actions-js-build/commit@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
