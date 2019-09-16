@@ -6,11 +6,13 @@
   "scripts": {
     "wordpress:linkComponents": ". scripts/linkWordpressComponents.sh",
     "wordpress:updateComponents": ". scripts/updateWordpressComponents.sh",
+    "generateIndex": ". scripts/generateIndexDirectory.sh",
     "resolveReadmeDeps": ". scripts/resolveReadmeDependencies.sh",
     "prestyleguide": "npm run wordpress:linkComponents && npm run resolveReadmeDeps",
     "prestyleguide:build": "npm run wordpress:updateComponents && npm run wordpress:linkComponents && npm run resolveReadmeDeps",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "poststyleguide:build": "npm run generateIndex"
   },
   "author": "",
   "license": "ISC",
