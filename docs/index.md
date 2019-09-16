@@ -1,2 +1,3 @@
 ## @wordpress/components by version
-* [8.2.0](8.2.0)$\n
+-e 
+* [8.2.0](8.2.0)
