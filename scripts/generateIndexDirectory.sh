@@ -8,21 +8,13 @@ LINKS="";
 
 for VERSION in $VERSION_DIRECTORIES
 do
-  LINKS="$LINKS<a href='$VERSION'>$VERSION</a><br/>"
+  LINKS="$LINKS"$'\n'"* [$VERSION]($VERSION)"
 done
 
-cat > index.html <<EOF
-<!doctype html>
-<html>
-<head>
-    <title>@wordpress/components by version</title>
-</head>
 
-<body>
-    $LINKS
-</body>
-
-</html>
+cat > index.md <<EOF
+#@wordpress/components by version
+$LINKS
 EOF
 
 cd $ROOT
