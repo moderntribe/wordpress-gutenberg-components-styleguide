@@ -1,4 +1,4 @@
-#! /usr/bin/env bash 
+#! /usr/bin/env bash
 ROOT=$(pwd)
 
 cd $ROOT/docs
@@ -8,7 +8,7 @@ LINKS="";
 
 for VERSION in $VERSION_DIRECTORIES
 do
-  LINKS="$LINKS"$'\n'"* [$VERSION]($VERSION)"
+  LINKS="$LINKS* [$VERSION]($VERSION)"$'\n'
 done
 
 
