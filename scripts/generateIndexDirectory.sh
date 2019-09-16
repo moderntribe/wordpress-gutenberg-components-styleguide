@@ -13,7 +13,7 @@ done
 
 
 cat > index.md <<EOF
-#@wordpress/components by version
+## @wordpress/components by version
 $LINKS
 EOF
 
