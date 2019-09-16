@@ -19,7 +19,7 @@ module.exports = {
 	entry: './src/components/index.js',
 
 	output: {
-		filename: '[name].[chunkhash].js',
+		filename: '[id].[name].[chunkhash].js',
 		path: path.resolve( __dirname, 'dist' ),
 	},
 
