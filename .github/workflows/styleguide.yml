@@ -21,6 +21,6 @@ jobs:
           npm run styleguide:build --if-present
 
       - name: Commit changes
-        uses: elstudio/actions-js-build/commit@v2
+        uses: nealfennimore/actions-js-build/commit@v2.0.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
