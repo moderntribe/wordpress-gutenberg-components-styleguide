@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
 ROOT=$(pwd)
 
 cd $ROOT/docs
