@@ -13,6 +13,8 @@ done
 
 LINKS=$(echo -e $LINKS) # Use new lines properly
 
+echo $LINKS
+
 cat > index.md <<EOF
 ## @wordpress/components by version
 $LINKS
