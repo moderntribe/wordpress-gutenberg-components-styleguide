@@ -8,10 +8,8 @@ LINKS="";
 
 for VERSION in $VERSION_DIRECTORIES
 do
-  LINKS+="<a href='$VERSION'>$VERSION</a><br/>"
+  LINKS="$LINKS<a href='$VERSION'>$VERSION</a><br/>"
 done
-
-echo $LINKS
 
 cat > index.html <<EOF
 <!doctype html>
