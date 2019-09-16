@@ -8,12 +8,10 @@ LINKS="";
 
 for VERSION in $VERSION_DIRECTORIES
 do
-  LINKS="$LINKS"'\n'"* [$VERSION]($VERSION)"
+  LINKS="$LINKS* [$VERSION]($VERSION)\n"
 done
 
-LINKS=$(echo -e $LINKS) # Use new lines properly
-
-echo $LINKS
+LINKS=$(printf "$LINKS") # Use new lines properly
 
 cat > index.md <<EOF
 ## @wordpress/components by version
