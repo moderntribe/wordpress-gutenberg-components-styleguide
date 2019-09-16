@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/env sh
 ROOT=$(pwd)
 
 cd $ROOT/docs
@@ -8,9 +8,10 @@ LINKS="";
 
 for VERSION in $VERSION_DIRECTORIES
 do
-  LINKS="$LINKS* [$VERSION]($VERSION)"$'\n'
+  LINKS="$LINKS"'\n'"* [$VERSION]($VERSION)"
 done
 
+LINKS=$(echo -e $LINKS) # Use new lines properly
 
 cat > index.md <<EOF
 ## @wordpress/components by version
