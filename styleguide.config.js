@@ -1,7 +1,11 @@
 const path = require( 'path' );
+const fs = require( 'fs' );
 const isEmpty = require( 'lodash/isEmpty' );
 
 const sections = require( './styleguide.sections' );
+
+const packageJson = JSON.parse( fs.readFileSync( path.join( __dirname, 'package.json' ) ) );
+const [ wpVersion ] = packageJson.dependencies[ '@wordpress/components' ].match( /\d+\.\d+\.\d+/ );
 
 module.exports = {
 	components: 'src/components/**/*.js',
@@ -17,7 +21,7 @@ module.exports = {
 		'**/mobile/**',
 	],
 
-	styleguideDir: './',
+	styleguideDir: `./docs/${ wpVersion }`,
 
 	require: [
 		path.join( __dirname, 'node_modules/@wordpress/components/build-style/style.css' ),
