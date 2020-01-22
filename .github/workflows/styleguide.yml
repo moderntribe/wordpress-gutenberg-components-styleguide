@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 10
@@ -21,6 +21,6 @@ jobs:
           npm run styleguide:build --if-present
 
       - name: Commit changes
-        uses: nealfennimore/actions-js-build/commit@v2.0.5
+        uses: elstudio/actions-js-build/commit@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
